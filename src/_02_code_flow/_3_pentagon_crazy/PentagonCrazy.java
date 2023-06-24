@@ -10,6 +10,18 @@ import java.awt.Color;
 public class PentagonCrazy {
 	
 	public static void main(String[] args) {
+		Robot rob = new Robot();
+		rob.penDown();
+		rob.setSpeed(100);
+		rob.setPenColor(0,0,0);
+		int numSides = 5;
+		int angle = 360/numSides;
+		int count = 0;
+		while (count < 200) {
+			rob.move(count);
+			rob.turn(angle + 1);
+			count += 1;
+		}
 		
 		//  Create a new Robot
 

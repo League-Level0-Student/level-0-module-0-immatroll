@@ -12,7 +12,17 @@ public class RobotSpiral {
 	public static void main(String[] args) {
 		
 		// Create a new Robot
-		
+		Robot rob = new Robot();
+		rob.penDown();
+		rob.setSpeed(500);
+		int count = 0;
+		while (count < 50) {
+			rob.setRandomPenColor();
+			rob.move(5 * count);
+			rob.turn(360/7);
+			count += 1;
+			rob.setPenWidth(count);
+		}
 		// Set your robot's pen down 
 		
 		// SPEED. Set the robot to go at max speed (100)
